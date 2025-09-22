@@ -1,66 +1,15 @@
-@import "tailwindcss";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Base dark mode background and text */
 body {
-  @apply bg-[#181818] text-white font-sans;
+  font-family: 'Inter', sans-serif;
 }
 
-/* Headers */
-h1, h2, h3 {
-  font-weight: 900;
-  letter-spacing: 0.03em;
-  color: white;
+/* Custom dark mode styles */
+.dark .bg-gray-800 {
+  background-color: #1a202c;
 }
-
-/* Link styling */
-a {
-  @apply text-blue-300 underline hover:text-blue-400;
-}
-
-/* Button styling (primary) */
-button {
-  @apply bg-[#5a60ea] text-white font-bold rounded-lg transition-colors duration-200;
-}
-button:hover {
-  @apply bg-[#757bfa];
-}
-
-/* Card backgrounds and shadow */
-.bg-card {
-  background-color: #222228;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.75);
-  border-radius: 1rem;
-}
-
-/* Avatar circle */
-.avatar-circle {
-  @apply w-10 h-10 rounded-full flex items-center justify-center text-white font-bold;
-  background-color: #5a60ea;
-}
-
-/* Scrollbar (optional) */
-::-webkit-scrollbar {
-  width: 8px;
-}
-::-webkit-scrollbar-thumb {
-  background-color: #5a60ea;
-  border-radius: 4px;
-}
-::-webkit-scrollbar-track {
-  background-color: #181818;
-}
-
-/* Responsive tweaks */
-@media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-}
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
-  }
+.dark .text-white {
+  color: #fff;
 }
